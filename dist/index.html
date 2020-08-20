@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+
+  <!-- <meta http-equiv="x-dns-prefetch-control" content="on" /> -->
+  <!-- <link rel="dns-prefetch" href="//xlsdg.github.io" /> -->
+
+  <meta name="format-detection" content="telephone=no,email=no" />
+
+  <!-- <link type="image/x-icon" rel="icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
+  <link type="image/x-icon" rel="bookmark" href="/favicon.ico" /> -->
+  <style>
+    #loadingSd {
+      background-color: #fff;
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 8888;
+      margin-top: 0px;
+      top: 0px;
+    }
+
+    #loading-center {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    #loading-center-absolute {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 4rem;
+      width: 4rem;
+      margin-left: -2rem;
+      margin-top: -1.7rem;
+    }
+
+    .double-bounce {
+      width: 2rem;
+      height: 2rem;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .double-bounce1,
+    .double-bounce2 {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #f96651;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      -webkit-animation: bounce 2.0s infinite ease-in-out;
+      -moz-animation: bounce 2.0s infinite ease-in-out;
+      -o-animation: bounce 2.0s infinite ease-in-out;
+      animation: bounce 2.0s infinite ease-in-out;
+    }
+
+    .double-bounce2 {
+      -webkit-animation-delay: -1.0s;
+      -moz-animation-delay: -1.0s;
+      -o-animation-delay: -1.0s;
+      animation-delay: -1.0s;
+    }
+
+    @-webkit-keyframes bounce {
+      0%,
+      100% {
+        -webkit-transform: scale(0.0)
+      }
+      50% {
+        -webkit-transform: scale(1.0)
+      }
+    }
+
+    @-moz-keyframes bounce {
+      0%,
+      100% {
+        -moz-transform: scale(0.0)
+      }
+      50% {
+        -moz-transform: scale(1.0)
+      }
+    }
+
+    @-o-keyframes bounce {
+      0%,
+      100% {
+        -o-transform: scale(0.0)
+      }
+      50% {
+        -o-transform: scale(1.0)
+      }
+    }
+
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: scale(0.0);
+      }
+      50% {
+        transform: scale(1.0);
+      }
+    }
+
+    .loadingHidden {
+      -webkit-animation: verihidden 1s ease-out;
+      animation: verihidden 1s ease-out;
+    }
+
+    @-webkit-keyframes verihidden {
+      0% {
+        opacity: 1;
+      }
+      70% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 0;
+        display: none
+      }
+    }
+
+    @keyframes verihidden {
+      0% {
+        opacity: 1;
+      }
+      70% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="./slickSlider.css">
+  <title>猪游纪，一起来撸吧</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <!-- 高清方案脚本 -->
+  <script type="text/javascript" src="./fontFlex.js"></script>
+  <link href="/index.b3fec8bb.css" rel="stylesheet"></head>
+
+<body>
+<div id="loadingSd">
+  <div id="loading-center">
+    <div id="loading-center-absolute">
+      <div class="double-bounce">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+      <br/>
+      <p style="color:#666;font-size:0.35rem">(⊙o⊙) 正在拼命加载中...</p>
+    </div>
+  </div>
+</div>
+<div id="root"></div>
+<!-- FastClick -->
+<script type="text/javascript" src="./fastclick.js"></script>
+<script type="text/javascript" src="./jweixin-1.2.0.js"></script>
+<script>
+  if ('addEventListener' in document) {
+    // window.onpageshow = function () {
+    //   setTimeout(function () { // 修复 ios 客户端跳转后再返回触发 popstate 事件时已经设置 sessionStorage 存储，导致直接关闭页面
+    //     sessionStorage.setItem('back', true)
+    //   })
+    // }
+
+    // window.onpagehide = function () {
+    //   sessionStorage.removeItem('back')
+    // }
+
+    window.addEventListener('load', function () {
+      // document.addEventListener('touchmove', function(e) {
+      //     e.preventDefault();
+      // });
+      document.getElementById("loadingSd").className = "loadingHidden";
+      setTimeout(function () {
+        document.getElementById("loadingSd").style.display = "none";
+      }, 0);
+      FastClick.attach(document.body);
+    }, false);
+  }
+</script>
+<script type="text/javascript" src="/index.4a8ff64f.js"></script></body>
+
+</html>
+No newline at end of file

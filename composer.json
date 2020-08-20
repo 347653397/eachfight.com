@@ -1,0 +1,25 @@
+{
+	"description": "eachfight",
+	"name": "347653397/eachfight",
+	"type": "project",
+	"homepage": "https://codeigniter.com",
+	"license": "MIT",
+	"support": {
+		"issues": "https://github.com/347653397/api.eachfight.com/issues",
+		"forum": "https://github.com/347653397",
+		"source": "https://github.com/347653397/api.eachfight.com"
+	},
+	"require": {
+		"php": ">=5.5",
+		"overtrue/wechat": "~3.1",
+		"symfony/var-dumper":"v3.2.7",
+		"jjonline/aliyun-dysms-php-sdk": "^2.0"
+	},
+	"suggest": {
+		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
+	},
+	"require-dev": {
+		"mikey179/vfsStream": "1.1.*",
+		"phpunit/phpunit": "4.* || 5.*"
+	}
+}
